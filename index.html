@@ -6158,10 +6158,9 @@ function changeTheme(theme){
 }
 
 // Load saved theme
-const savedTheme = localStorage.getItem('radioTheme');
-if(savedTheme){
-  document.documentElement.className = savedTheme;
-}
+// Always force Wiskee Wheelz as default theme on every load
+document.documentElement.className = 'wiskee';
+localStorage.setItem('radioTheme', 'wiskee');
 
 // Initialize in OFF state
 document.getElementById('pwr').textContent = 'OFF';
